@@ -32,6 +32,7 @@ function c100266021.initial_effect(c)
 	e3:SetCondition(c100266021.spcon)
 	e3:SetTarget(c100266021.sptg)
 	e3:SetOperation(c100266021.spop)
+	e3:SetLabelObject(e2)
 	c:RegisterEffect(e3)
 end
 c100266021.xyz_number=1
@@ -55,14 +56,16 @@ end
 function c100266021.regop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	if Duel.GetTurnPlayer()==tp and Duel.GetCurrentPhase()==PHASE_STANDBY then
+		e:SetLabel(Duel.GetTurnCount())
 		c:RegisterFlagEffect(100266021,RESET_EVENT+RESETS_STANDARD+RESET_PHASE+PHASE_STANDBY+RESET_SELF_TURN,0,2)
-		c:RegisterFlagEffect(100266021,RESET_EVENT+RESETS_STANDARD+RESET_PHASE+PHASE_STANDBY+RESET_SELF_TURN,0,1)
 	else
+		e:SetLabel(0)
 		c:RegisterFlagEffect(100266021,RESET_EVENT+RESETS_STANDARD+RESET_PHASE+PHASE_STANDBY+RESET_SELF_TURN,0,1)
 	end
 end
 function c100266021.spcon(e,tp,eg,ep,ev,re,r,rp)
-	return Duel.GetTurnPlayer()==tp and e:GetHandler():GetFlagEffect(100266021)==1 
+	return Duel.GetTurnPlayer()==tp and e:GetHandler():GetFlagEffect(100266021)>0
+		and e:GetLabelObject():GetLabel()~=Duel.GetTurnCount()
 end
 function c100266021.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()
