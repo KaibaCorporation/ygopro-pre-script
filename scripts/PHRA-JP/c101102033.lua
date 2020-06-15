@@ -1,4 +1,6 @@
---双天拳 铠吽
+--双天脚 鎧吽
+--
+--Script by JustFish
 function c101102033.initial_effect(c)
 	--fusion material
 	c:EnableReviveLimit()
@@ -20,6 +22,7 @@ function c101102033.initial_effect(c)
 	e2:SetCode(EVENT_FREE_CHAIN)
 	e2:SetRange(LOCATION_MZONE)
 	e2:SetProperty(EFFECT_FLAG_CARD_TARGET)
+	e2:SetHintTiming(0,TIMING_MAIN_END)
 	e2:SetCountLimit(1,101102033)
 	e2:SetCondition(c101102033.discon)
 	e2:SetTarget(c101102033.distg)
@@ -27,8 +30,8 @@ function c101102033.initial_effect(c)
 	c:RegisterEffect(e2)
 end
 function c101102033.repfilter(c,tp)
-	return c:IsSetCard(0x24d) and c:IsType(TYPE_FUSION) and c:IsControler(tp) and c:IsLocation(LOCATION_ONFIELD)
-		and c:IsReason(REASON_BATTLE+REASON_EFFECT) and not c:IsReason(REASON_REPLACE)
+	return c:IsFaceup() and c:IsSetCard(0x24d) and c:IsType(TYPE_FUSION) and c:IsControler(tp) and c:IsLocation(LOCATION_MZONE)
+		and c:IsReason(REASON_EFFECT) and not c:IsReason(REASON_REPLACE)
 end
 function c101102033.desfilter(c,e,tp)
 	return c:IsFaceup() and c:IsControler(tp) and c:IsLocation(LOCATION_MZONE) and c:IsSetCard(0x24d)
@@ -60,7 +63,8 @@ function c101102033.fmfilter(c)
 	return c:IsType(TYPE_FUSION) and c:IsSetCard(0x24d) and c:IsFaceup() and mg and mg:IsExists(Card.IsType,1,nil,TYPE_EFFECT)
 end
 function c101102033.discon(e,tp,eg,ep,ev,re,r,rp)
-	return Duel.IsExistingMatchingCard(c101102033.fmfilter,tp,LOCATION_MZONE,0,1,nil)
+	return (Duel.GetCurrentPhase()==PHASE_MAIN1 or Duel.GetCurrentPhase()==PHASE_MAIN2)
+		and Duel.IsExistingMatchingCard(c101102033.fmfilter,tp,LOCATION_MZONE,0,1,nil)
 end
 function c101102033.disfilter(c)
 	return aux.disfilter1(c) and c:GetSummonLocation()==LOCATION_EXTRA
@@ -79,11 +83,13 @@ function c101102033.disop(e,tp,eg,ep,ev,re,r,rp)
 		local e1=Effect.CreateEffect(e:GetHandler())
 		e1:SetType(EFFECT_TYPE_SINGLE)
 		e1:SetCode(EFFECT_DISABLE)
+		e1:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
 		e1:SetReset(RESET_EVENT+RESETS_STANDARD+RESET_PHASE+PHASE_END)
 		tc:RegisterEffect(e1)
 		local e2=Effect.CreateEffect(e:GetHandler())
 		e2:SetType(EFFECT_TYPE_SINGLE)
 		e2:SetCode(EFFECT_DISABLE_EFFECT)
+		e2:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
 		e2:SetValue(RESET_TURN_SET)
 		e2:SetReset(RESET_EVENT+RESETS_STANDARD+RESET_PHASE+PHASE_END)
 		tc:RegisterEffect(e2)
