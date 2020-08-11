@@ -14,13 +14,13 @@ function c101102055.initial_effect(c)
 	c:RegisterEffect(e1)
 end
 function c101102055.tffilter(c,tp)
-	return c:IsSetCard(0x124e) and not c:IsType(TYPE_FIELD+TYPE_MONSTER) and not c:IsForbidden() and c:CheckUniqueOnField(tp)
+	return c:IsSetCard(0x114e) and not c:IsType(TYPE_FIELD+TYPE_MONSTER) and not c:IsForbidden() and c:CheckUniqueOnField(tp)
 end
 function c101102055.gtfilter(c)
-	return c:IsSetCard(0x124e) and c:IsFaceup()
+	return c:IsSetCard(0x114e) and c:IsFaceup()
 end
 function c101102055.spfilter(c,e,tp)
-	return c:IsSetCard(0x24e) and c:IsCanBeSpecialSummoned(e,0,tp,false,false) and Duel.GetLocationCountFromEx(tp,tp,nil,c)>0
+	return c:IsSetCard(0x14e) and c:IsCanBeSpecialSummoned(e,0,tp,false,false) and Duel.GetLocationCountFromEx(tp,tp,nil,c)>0
 end
 function c101102055.exfilter1(c)
 	return c:IsFacedown() and c:IsType(TYPE_XYZ+TYPE_SYNCHRO+TYPE_FUSION)
@@ -54,7 +54,7 @@ function c101102055.activate(e,tp,eg,ep,ev,re,r,rp)
 				e1:SetType(EFFECT_TYPE_FIELD)
 				e1:SetCode(EFFECT_UPDATE_ATTACK)
 				e1:SetTargetRange(LOCATION_MZONE,0)
-				e1:SetTarget(aux.TargetBoolFunction(Card.IsSetCard,0x24e))
+				e1:SetTarget(aux.TargetBoolFunction(Card.IsSetCard,0x14e))
 				e1:SetValue(200)
 				e1:SetReset(RESET_PHASE+PHASE_END)
 				Duel.RegisterEffect(e1,tp)
@@ -76,13 +76,9 @@ function c101102055.activate(e,tp,eg,ep,ev,re,r,rp)
 				if ect>0 and (ft1>0 or ft2>0) and Duel.SelectYesNo(tp,aux.Stringid(101102055,3)) then
 					Duel.BreakEffect()
 					local sg=Duel.GetMatchingGroup(c101102055.spfilter,tp,LOCATION_EXTRA,0,nil,e,tp)
-					if sg:GetCount()>0 then
-						Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
-						local rg=sg:SelectSubGroup(tp,c101102055.fselect,false,1,4,ft1,ft2,ect,ft)
-						if rg:GetCount()>0 then
-							Duel.SpecialSummon(rg,0,tp,tp,false,false,POS_FACEUP)
-						end
-					end
+					Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
+					local rg=sg:SelectSubGroup(tp,c101102055.fselect,false,1,4,ft1,ft2,ect,ft)
+					Duel.SpecialSummon(rg,0,tp,tp,false,false,POS_FACEUP)
 				end
 			end
 		end

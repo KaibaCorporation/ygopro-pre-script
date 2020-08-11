@@ -7,6 +7,7 @@ function c101102074.initial_effect(c)
 	e1:SetType(EFFECT_TYPE_ACTIVATE)
 	e1:SetCode(EVENT_FREE_CHAIN)
 	e1:SetCountLimit(1,101102074+EFFECT_COUNT_CODE_OATH)
+	e1:SetHintTiming(TIMING_MAIN_END)
 	e1:SetCondition(c101102074.condition)
 	e1:SetCost(c101102074.cost)
 	e1:SetTarget(c101102074.target)
@@ -21,7 +22,7 @@ function c101102074.cost(e,tp,eg,ep,ev,re,r,rp,chk)
 	return true
 end
 function c101102074.filter(c)
-	return c:IsSetCard(0x24d) and not c:IsCode(101102074) and c:IsType(TYPE_SPELL+TYPE_TRAP) and c:CheckActivateEffect(false,true,false)~=nil
+	return c:IsSetCard(0x14f) and not c:IsCode(101102074) and c:IsType(TYPE_SPELL+TYPE_TRAP) and c:CheckActivateEffect(false,true,false)~=nil
 end
 function c101102074.target(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chk==0 then
