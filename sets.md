@@ -2,15 +2,14 @@
 - V Jump promotional cards (VJMP-JP) : `100200XXX`
 - Weekly Shōnen Jump promotional cards (WJMP-JP) : `100203XXX`
 - Saikyō Jump promotional card (SJMP-JP) : `100204XXX`
-- **May 21, 2020** :PRISMATIC SPECIAL PACK (VP20-JP) : `100267XXX`
-- **August 8, 2020** : PHANTOM RAGE (PHRA-JP) : `101102XXX`
-- **August 28, 2020** : 2020 Tin of Lost Memories (MP20-EN) : `100271XXX`
-- **August 29, 2020** : Structure Deck R: Dragunity Drive (SR11-JP) : `100311XXX`
-- **September 4, 2020**: Yu-Gi-Oh! OCG Structures Volume 2 promotional card (YO02-JP): `100269XXX`
-- **September 12, 2020**: Deck Build Pack: Genesis Impactors (DBGI-JP): `100415XXX`
+- **March 6, 2021**: Deck Build Pack: Ancient Guardians (DBAG-JP): `100416XXX`
+- **March 19, 2021**: The Valuable Book EX (VX01-JP) : `100277XXX`
+- **April 2, 2021**: Yu-Gi-Oh! OCG Structures Volume 3 promotional card (YO03-JP): `100276XXX`
+- **April 17, 2021**: DAWN OF MAJESTY (DAMA-JP) : `101105XXX`
+- **April ??, 2021**: Number Complete File -Piece of Memories- (NOCF?-JP): `100274XXX`
 
 # Announced
-- **October 3, 2020** :WORLD PREMIERE PACK 2020(WP20-JP) : `100270XXX`
+- **May 15, 2021**: Structure Deck: Cyber Style's Successor (SD41-JP) : `100341XXX`
 
 # Archived
 ## Other packs
@@ -85,6 +84,13 @@
 - Duel Overload (DUOV-EN) : `100265XXX`
 - Toon Chaos (TOCH-EN) : `100268XXX`
 - Collectors Pack 2020 (CP20-JP) : `100266XXX`
+- PRISMATIC SPECIAL PACK (VP20-JP) : `100267XXX`
+- 2020 Tin of Lost Memories (MP20-EN) : `100271XXX`
+- Yu-Gi-Oh! OCG Structures Volume 2 promotional card (YO02-JP): `100269XXX`
+- SELECTION 10 (SLT1-JP) : `100270XXX`
+- PRISMATIC GOD BOX (PGB1-JP) : `100272XXX`
+- Premium Pack 2021 (21PP-JP): `100273XXX`
+- "Amabie-San" Present Campaign (21CC-JP): `100275XXX`
 
 ## Structure decks
 - Structure Deck: Yugi Muto (SDMY-JP) : `100301XXX`
@@ -98,6 +104,7 @@
 - Structure Deck R: Lord of Magician (SR08-JP) : `100308XXX`
 - Structure Deck R: Warrior's Strike (SR09-JP) : `100309XXX`
 - Structure Deck R: Machiners Command (SR10-JP) : `100310XXX`
+- Structure Deck R: Dragunity Drive (SR11-JP) : `100311XXX`
 -----
 - Starter Deck 2016 (ST16-JP) : `100316XXX`
 - Starter Deck 2017 (ST17-JP) : `100317XXX`
@@ -113,6 +120,7 @@
 - Structure Deck: Rebirth of Shaddoll (SD37-JP) : `100337XXX`
 - Structure Deck: Sacred Beasts of Chaos (SD38-JP) : `100338XXX`
 - Structure Deck: Masters of the Spiritual Arts (SD39-JP) : `100339XXX`
+- Structure Deck: Ice Barrier of the Frozen Prison (SD40-JP) : `100340XXX`
 
 ## Duelist packs & Booster SP packs & Deck Build packs
 - Booster SP: Destiny Soldiers (SPDS-JP) : `100405XXX`
@@ -123,6 +131,7 @@
 - Deck Build Pack: Infinity Chasers (DBIC-JP) : `100412XXX`
 - Deck Build Pack: Mystic Fighters (DBMF-JP) : `100413XXX`
 - Deck Build Pack: Secret Slayers (DBSS-JP) : `100414XXX`
+- Deck Build Pack: Genesis Impactors (DBGI-JP): `100415XXX`
 -----
 - Duelist Pack: Pharaoh's Memories (DP17-JP) : `100417XXX`
 - Duelist Pack: Legend Duelist (DP18-JP) : `100418XXX`
@@ -151,3 +160,6 @@
 - IGNITION ASSAULT (IGAS-JP) : `101011XXX`
 - ETERNITY CODE (ETCO-JP) : `101012XXX`
 - RISE OF THE DUELIST (ROTD-JP) : `101101XXX`
+- PHANTOM RAGE (PHRA-JP) : `101102XXX`
+- Blazing Vortex (BLVO-JP): `101103XXX`
+- LIGHTNING OVERDRIVE (LIOV-JP): `101104XXX`
